@@ -27,12 +27,20 @@
     //createElement will create a tag
     //takes 3 args,<tagname,object,valueInside_tag>
 
+    console.log(heading); 
+    //This is a plaing JS object.
+    //The react elements are basically object.
+    
+
     const root = ReactDOM.createRoot(document.getElementById("root"));
 
     //this tells where in HTML we want to run the react code.
 
     root.render(heading);
-    
+    //passing a react element inside the root.
+    //This render method, takes an object and modifies the DOM.
+    //Hence DOM is rendered with the values of this react element, which is nothing but a 
+    //JS object.
 
 </script>
 </html>
