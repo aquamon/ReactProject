@@ -8,6 +8,7 @@
 </head>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- The second library DOM will tell the DOM how to create element -->
 <body>
     <!-- 
         By Simply inject React into the DOM we have now used React,
@@ -15,5 +16,23 @@
         This script gives a  Global Object React in the browser.
         and also the React DOM
      -->
+
+     <div id="root">
+
+     </div>
 </body>
+<script>
+
+    const heading = React.createElement("h1" , {} , "Hello from React"); 
+    //createElement will create a tag
+    //takes 3 args,<tagname,object,valueInside_tag>
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    //this tells where in HTML we want to run the react code.
+
+    root.render(heading);
+    
+
+</script>
 </html>
