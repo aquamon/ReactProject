@@ -6,18 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <body>
-    <h1>Hello World</h1>
-    <div id="root"></div>
+    <!-- 
+        By Simply inject React into the DOM we have now used React,
+        react is just a piece of JS code.
+        This script gives a  Global Object React in the browser.
+        and also the React DOM
+     -->
 </body>
-
-<script>
-    const heading = document.createElement('h1');
-
-    heading.innerHTML = "Hello Everyone";
-
-    document.getElementById('root').appendChild(heading);
-
-    
-</script>
 </html>
