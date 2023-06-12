@@ -19,11 +19,24 @@
 
      <div id="root">
 
+        <h1>Hello From HTML</h1>
+        <h1>Hello From HTML</h1>
+        <h1>Hello From HTML</h1>
+        <h1>Hello From HTML</h1>
+
      </div>
+     <!-- What ever is there insid the Root, React will overwrite them
+        
+    
+    -->
 </body>
 <script>
 
-    const heading = React.createElement("h1" , {} , "Hello from React"); 
+    const heading = React.createElement("h1" , {
+        id : "title"
+    } , "Hello from React"); 
+
+    //h1 will now have an attribute id
     //createElement will create a tag
     //takes 3 args,<tagname,object,valueInside_tag>
 
