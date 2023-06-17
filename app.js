@@ -1,3 +1,6 @@
+import React  from "react";
+import ReactDOM  from "react-dom";
+
 const heading = React.createElement("h1" , {
     id : "title"
 } , "Hello from React"); 
@@ -33,3 +36,4 @@ root.render(div);
 //This render method, takes an object and modifies the DOM.
 //Hence DOM is rendered with the values of this react element, which is nothing but a 
 //JS object.
+
