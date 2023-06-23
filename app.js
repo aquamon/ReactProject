@@ -40,11 +40,11 @@ const FooterComponent = () => {
 };
 const AppLayout = () => {
     return (
-        <React.Fragment>
+        <>
             <HeaderComponent/>
             <BodyComponent/>
             <FooterComponent/>
-        </React.Fragment>
+        </>
     )
 };
 
