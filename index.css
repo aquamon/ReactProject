@@ -5,6 +5,10 @@
     margin: 10px;
     border : 1px solid black;
 }
+
+.footer{
+    margin: 10px;
+}
 .nav-items > ul{
     list-style-type: none;
     display: flex;
@@ -27,4 +31,10 @@
 
 .card > img {
     width: 100%;
+}
+
+.restaurantList{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 10px;
 }

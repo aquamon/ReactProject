@@ -43,7 +43,7 @@ const RestaurantCard = () => {
         <div className="card">
             <img src={burgerKing.image}></img>
             <h2>{burgerKing.name}</h2>
-            <h3>{burgerKing.cuisines}</h3>
+            <h3>{burgerKing.cuisines.join(', ')}</h3>
             <h4>{burgerKing.rating}</h4>
         </div>
     )
@@ -51,15 +51,29 @@ const RestaurantCard = () => {
 
 const BodyComponent = () => {
     return (
-        <div>
+        <div className="restaurantList">
             <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/>
+            <RestaurantCard/> 
         </div>        
     )
 };
 
 const FooterComponent = () => {
     return (
-        <h4 style = {{
+        <h4 className="footer" style = {{
             backgroundColor : "blue"
         }}>This is a Footer</h4>
     )
