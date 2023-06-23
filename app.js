@@ -31,13 +31,20 @@ const styleObj = {
     backgroundColor : "red",
 }
 
+const burgerKing = {
+    name : "Burger King",
+    image : "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zcbqyrw180xvikcbqdsc",
+    cuisines : ["American" , "Chinese"],
+    rating : "2.9"
+}
+
 const RestaurantCard = () => {
     return (
         <div className="card">
-            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zcbqyrw180xvikcbqdsc"></img>
-            <h2>Burger King</h2>
-            <h3>Burgers American</h3>
-            <h4>4.2 Stars</h4>
+            <img src={burgerKing.image}></img>
+            <h2>{burgerKing.name}</h2>
+            <h3>{burgerKing.cuisines}</h3>
+            <h4>{burgerKing.rating}</h4>
         </div>
     )
 }
