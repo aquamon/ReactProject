@@ -30,9 +30,23 @@ const HeaderComponent = () => {
 const styleObj = {
     backgroundColor : "red",
 }
+
+const RestaurantCard = () => {
+    return (
+        <div className="card">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zcbqyrw180xvikcbqdsc"></img>
+            <h2>Burger King</h2>
+            <h3>Burgers American</h3>
+            <h4>4.2 Stars</h4>
+        </div>
+    )
+}
+
 const BodyComponent = () => {
     return (
-        <h4 style={styleObj}>This is a Body</h4>
+        <div>
+            <RestaurantCard/>
+        </div>        
     )
 };
 
@@ -43,6 +57,9 @@ const FooterComponent = () => {
         }}>This is a Footer</h4>
     )
 };
+
+const heading1 = <p>thiheiaei</p>
+const heading2 = <p>thiheiaasdfasdfadsfei</p>
 const AppLayout = () => {
     return (
         <>
