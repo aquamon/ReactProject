@@ -27,15 +27,20 @@ const HeaderComponent = () => {
     )
 };
 
+const styleObj = {
+    backgroundColor : "red",
+}
 const BodyComponent = () => {
     return (
-        <h4>This is a Body</h4>
+        <h4 style={styleObj}>This is a Body</h4>
     )
 };
 
 const FooterComponent = () => {
     return (
-        <h4>This is a Footer</h4>
+        <h4 style = {{
+            backgroundColor : "blue"
+        }}>This is a Footer</h4>
     )
 };
 const AppLayout = () => {
