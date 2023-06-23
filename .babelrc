@@ -1,4 +1,4 @@
 {
-    "plugins": [ ["transform-remove-console", 
-    { "exclude": [ "error"] }] ]
+    // "plugins": [ ["transform-remove-console", 
+    // { "exclude": [ "error"] }] ]
 }
