@@ -1,5 +1,5 @@
 import React  from "react";
-import ReactDOM  from "react-dom";
+import ReactDOM  from "react-dom/client";
 
 const heading = React.createElement("h1" , {
     id : "title"
@@ -19,17 +19,27 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //this tells where in HTML we want to run the react code.
 
 const heading1 = React.createElement("h1",{
-    id : "title"
-}, "Heading 1");
+    id : "title",
+    key : "h1"
+}, "Heading 1 from parcel");
 
 
 const heading2 = React.createElement("h1" , {
-    id : "title"
+    id : "title",
+    key : "h2"
 }, "Heading 2");
+
+const heading99 = (
+    <h1 id="title11" key="uniqueKey">
+        This is a JSX
+    </h1>
+    );
+
 
 const div = React.createElement("div",{
     id : "container"
-}, [heading1,heading2]);
+}, [heading1,heading2,heading99]);
+
 
 root.render(div);
 //passing a react element inside the root.
