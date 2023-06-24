@@ -872,15 +872,16 @@ const restaurantList = [
       }
 ];
 
-const RestaurantCard = ({restaurant}) => {
-    {console.log(restaurant)}
+const RestaurantCard = ({name,cloudinaryImageId,cuisines,avgRating}) => {
+    // {console.log(restaurant)}
+    // const {name,cloudinaryImageId,cuisines,avgRating} = restaurant.data;
     return (
 
         <div className="card">
-            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+restaurant.data?.cloudinaryImageId}></img>
-            <h2>{restaurant.data?.name}</h2>
-            <h3>{restaurant.data?.cuisines.join(', ')}</h3>
-            <h4>{restaurant.data?.avgRating}</h4>
+            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId}></img>
+            <h2>{name}</h2>
+            <h3>{cuisines.join(', ')}</h3>
+            <h4>{avgRating}</h4>
         </div>
     )
 }
@@ -888,13 +889,13 @@ const RestaurantCard = ({restaurant}) => {
 const BodyComponent = () => {
     return (
         <div className="restaurantList">
-            <RestaurantCard restaurant={restaurantList[0]}/>
-            <RestaurantCard restaurant={restaurantList[1]}/>
-            <RestaurantCard restaurant={restaurantList[2]}/>
-            <RestaurantCard restaurant={restaurantList[3]}/>
-            <RestaurantCard restaurant={restaurantList[4]}/>
-            <RestaurantCard restaurant={restaurantList[5]}/>
-           
+          {
+            restaurantList.map((restaurant) => {
+              return (
+              <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>
+              )
+            })
+          }
         </div>        
     )
 };
