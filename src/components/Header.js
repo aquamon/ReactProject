@@ -1,5 +1,4 @@
-//Named Export
-export const Title = () => (
+const Title = () => (
     <a href="/">
         <img className="logo" 
             src = "https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
@@ -8,7 +7,7 @@ export const Title = () => (
 );
 
 
-const Header = () => {
+const HeaderComponent = () => {
     return (
         <div className="header">
             <Title/>
@@ -24,4 +23,4 @@ const Header = () => {
     )
 };
 //default export
-export default Header;
+export default HeaderComponent;
