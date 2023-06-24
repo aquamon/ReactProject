@@ -1,31 +1,17 @@
 import React  from "react";
 import ReactDOM  from "react-dom/client";
+//Default import , while doing default import this name could be anything, like newHeader
+//
+import Header  from "./components/Header";
+//Named import , for named import name should be same
+import { Title } from "./components/Header";
 
+//Importing everything from the module
 
+import * as Obj from "./components/Header"
 
-const Title = () => (
-    <a href="/">
-        <img className="logo" 
-            src = "https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
-                alt = "Logo"></img>
-    </a>
-);
+//Obj.Title
 
-const HeaderComponent = () => {
-    return (
-        <div className="header">
-            <Title/>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-};
 
 const styleObj = {
     backgroundColor : "red",
@@ -913,7 +899,7 @@ const heading2 = <p>thiheiaasdfasdfadsfei</p>
 const AppLayout = () => {
     return (
         <>
-            <HeaderComponent/>
+             <Header/>
             <BodyComponent/>
             <FooterComponent/>
         </>
