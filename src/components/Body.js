@@ -3,7 +3,6 @@ import { useState , useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
-debugger;
 
 function filterData(searchInput , restaurants) {
     
