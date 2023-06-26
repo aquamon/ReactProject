@@ -2,7 +2,7 @@
 const AboutComponent = ()=>{
     return (
         <div>
-            This is the React App for Food Ordering.
+            <h1>This is the About us page</h1>
         </div>
     )
 }

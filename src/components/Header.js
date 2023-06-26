@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Title = () => (
-    <a href="/">
+    <Link to="/">
         <img className="logo" 
             src = "https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
                 alt = "Logo"></img>
-    </a>
+    </Link>
 );
 
 
@@ -20,9 +22,15 @@ const [isLoggedIn , setIsLoggedIn] = useState(false);
             <Title/>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
+                    <Link to="/">
+                        <li>Home</li>
+                    </Link>
+                    <Link to='/about'>
+                        <li>About Us</li>
+                    </Link>
+                    <Link to="/contact">
+                        <li>Contact</li>
+                    </Link>
                     <li>Cart</li>
                     
                 </ul>
