@@ -8,6 +8,7 @@ import AboutComponent from "./components/About";
 import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
 import ContactComponent from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import ProfileComponent from "./components/Profile";
 
 
 
@@ -35,6 +36,10 @@ const appRouter = createBrowserRouter([
             {
                 path : '/about',
                 element : <AboutComponent/>,
+                children : [{
+                    path : 'profile',
+                    element : <ProfileComponent/>
+                }]
             },
             {
                 path : '/contact',
