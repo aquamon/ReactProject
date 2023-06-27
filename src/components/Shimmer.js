@@ -1,8 +1,17 @@
+
+
 const Shimmer = ()=>{
     return (
-        <>
-            <h1>Loading Shimmer Data UI .....</h1>
-        </>
+       <div className="shimmer-container">
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+            <div className="shimmer-card"></div>
+       </div>
     )
 }
 
