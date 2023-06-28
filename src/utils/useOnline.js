@@ -8,16 +8,26 @@ const useOnline = ()=>{
 
     useEffect(()=>{
 
-        // console.log("inside_useEffect_Online");
-        window.addEventListener("online",()=>{
+        const handleOnline = ()=>{
             setIsOnline(true);
             // console.log("Online_event_fired");
-        });
+        }
+        // console.log("inside_useEffect_Online");
 
-        window.addEventListener("offline",()=>{
+        const handleOffline = ()=>{
             setIsOnline(false);
             // console.log("offline_event_fired");
-        })
+        }
+
+        window.addEventListener("online",handleOnline);
+        window.addEventListener("offline",handleOffline);
+
+        return ()=>{
+            window.removeEventListener("online",handleOnline);
+            window.removeEventListener("offline",handleOffline);
+        }
+            
+        
     },[])
 
     return isOnline;
