@@ -4,7 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
-
+import useOnline from "../utils/useOnline";
 // function filterData(searchInput , restaurants) {
     
 //     return restaurants.filter(restaurant => restaurant.data.name.includes(searchInput));
@@ -35,6 +35,12 @@ const BodyComponent = () => {
     
     
       console.log(json);
+    }
+
+    const online = useOnline();
+
+    if(!online){
+      return <h1>🔴 Your internet connection is lost</h1>
     }
 
   return (filteredRestaurants.length === 0) ? <Shimmer/> : (
