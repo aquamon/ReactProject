@@ -1,4 +1,4 @@
-import React, { Children }  from "react";
+import React, {  lazy , Suspense }  from "react";
 import ReactDOM  from "react-dom/client";
 import HeaderComponent  from "./components/Header";
 import BodyComponent from "./components/Body";
@@ -9,7 +9,17 @@ import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
 import ContactComponent from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileComponent from "./components/Profile";
+import Shimmer from "./components/Shimmer";
 
+//Dynamic Import
+// Lazy loading
+// Chunking
+// Code Splitting
+// On Demand Loading
+// Dynamic Bundling
+
+const InstamartComponent = lazy(()=> import('./components/Instamart'));
+//This is a Promise so it will get time to get resolved.
 
 
 
@@ -44,6 +54,12 @@ const appRouter = createBrowserRouter([
             {
                 path : '/contact',
                 element : <ContactComponent/>,
+            },
+            {
+                path : '/instamart',
+                element :   <Suspense fallback={<Shimmer/>}>
+                                <InstamartComponent/>
+                            </Suspense>,
             },
             {
                 path: "/restaurants/:resId",
