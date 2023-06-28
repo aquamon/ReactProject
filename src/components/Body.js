@@ -3,12 +3,12 @@ import { useState , useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { filterData } from "../utils/helper";
 
-
-function filterData(searchInput , restaurants) {
+// function filterData(searchInput , restaurants) {
     
-    return restaurants.filter(restaurant => restaurant.data.name.includes(searchInput));
-}
+//     return restaurants.filter(restaurant => restaurant.data.name.includes(searchInput));
+// }
 
 
 
