@@ -43,7 +43,7 @@ const BodyComponent = () => {
       return <h1>🔴 Your internet connection is lost</h1>
     }
 
-  return (filteredRestaurants.length === 0) ? <Shimmer/> : (
+  return (filteredRestaurants?.length === 0) ? <Shimmer/> : (
      <>
         <div className="search-container">
             <input 
@@ -64,7 +64,7 @@ const BodyComponent = () => {
         </div>
       <div className="restaurantList">
         {
-          filteredRestaurants.map((restaurant) => {
+          filteredRestaurants?.map((restaurant) => {
             return (
               <Link 
                 key={restaurant.data.id}
