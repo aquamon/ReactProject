@@ -41,7 +41,7 @@ const appRouter = createBrowserRouter([
         children : [
             {
                 path : '/',
-                element : <BodyComponent/>,
+                element : <BodyComponent user={{name:"Prop Drilling"}}/>,
             },
             {
                 path : '/about',

@@ -12,7 +12,7 @@ import useOnline from "../utils/useOnline";
 
 
 
-const BodyComponent = () => {
+const BodyComponent = ({user}) => {
 
 
     const [searchInput , setSearchInput] = useState("");
@@ -70,7 +70,7 @@ const BodyComponent = () => {
                 key={restaurant.data.id}
                 to={"/restaurants/" + restaurant.data.id}
               >
-                <RestaurantCard resData={restaurant}/>
+                <RestaurantCard resData={restaurant} user={user}/>
               </Link>
             )
           })

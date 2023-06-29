@@ -1,10 +1,8 @@
 import { IMG_CDN_URL } from "../utils/constants";
 
-const RestaurantCard = (props) => {
+const RestaurantCard = ({resData , user}) => {
 
-    const {resData} = props;
-
-
+  
     const {
         cloudinaryImageId,
         name,
@@ -27,6 +25,7 @@ const RestaurantCard = (props) => {
         <h4>{avgRating} stars</h4>
         <h4>₹{costForTwo / 100} FOR TWO</h4>
         <h4 className="text-sm italic">{deliveryTime} minutes</h4>
+        <h2>{user.name}</h2>
       </div>
     )
   }
