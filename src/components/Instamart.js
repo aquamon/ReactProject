@@ -1,12 +1,18 @@
+import { useState } from "react";
 
 const Section = ({title,description})=>{
+    
+    const [isVisible, setIsVisible] = useState(true);
+
     return(
         <div className="p-2 m-2 border border-black">
             <h3 className="font-bold text-xl">{title}</h3>
-            <p>{description}</p>
+            
+            {isVisible ? <button onClick={()=>{setIsVisible(false)}}>Hide</button> : <button onClick={()=>setIsVisible(true)}>Show</button>}
+            {isVisible && <p>{description}</p>}
         </div>
-    )
-}
+    );
+};
 
 
 
