@@ -1,8 +1,10 @@
 import { IMG_CDN_URL } from "../utils/constants";
-
+import { useContext } from "react";
+import userContext from "../utils/userContext";
 const RestaurantCard = ({resData , user}) => {
 
-  
+    const {userFromContext} = useContext(userContext);
+
     const {
         cloudinaryImageId,
         name,
@@ -26,6 +28,7 @@ const RestaurantCard = ({resData , user}) => {
         <h4>₹{costForTwo / 100} FOR TWO</h4>
         <h4 className="text-sm italic">{deliveryTime} minutes</h4>
         <h2>{user.name}</h2>
+        <h3 className="m-2 p-2 text-red-500">{userFromContext.name}-{userFromContext.email}</h3>
       </div>
     )
   }

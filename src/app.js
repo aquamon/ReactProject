@@ -10,6 +10,9 @@ import ContactComponent from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileComponent from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import { useState } from "react";
+
+import userContext from "./utils/userContext";
 
 //Dynamic Import
 // Lazy loading
@@ -24,12 +27,22 @@ const InstamartComponent = lazy(()=> import('./components/Instamart'));
 
 
 const AppLayout = () => {
+
+    const [user,setUser] = useState({
+        name : "Monash",
+        email : "monash@gmail.com"
+    });
+
     return (
-        <>
+        <userContext.Provider 
+            value={{
+                userFromContext : user,
+            }}
+        >
             <HeaderComponent/>
             <Outlet/>
             <FooterComponent/>
-        </>
+        </userContext.Provider>
     )
 };
 

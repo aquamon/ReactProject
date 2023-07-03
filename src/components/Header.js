@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
-
+import userContext from "../utils/userContext";
 
 const Title = () => (
     <Link to="/">
@@ -14,7 +14,10 @@ const Title = () => (
 
 const HeaderComponent = () => {
 
-const [isLoggedIn , setIsLoggedIn] = useState(false);
+    const [isLoggedIn , setIsLoggedIn] = useState(false);
+
+
+    const {userFromContext} = useContext(userContext);
 
 
     return (
@@ -38,6 +41,7 @@ const [isLoggedIn , setIsLoggedIn] = useState(false);
                     
                 </ul>
             </div>
+            <span className="p-10 font-bold text-red-900">{userFromContext.name}</span>
             <div className="m-8">
                 {
                     (isLoggedIn? <button onClick={ ()=>{
