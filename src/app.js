@@ -14,6 +14,9 @@ import { useState } from "react";
 
 import userContext from "./utils/userContext";
 
+import { Provider } from "react-redux";
+import store from "./utils/store";
+
 //Dynamic Import
 // Lazy loading
 // Chunking
@@ -34,7 +37,8 @@ const AppLayout = () => {
     });
 
     return (
-        <userContext.Provider 
+       <Provider store={store}>
+             <userContext.Provider 
             value={{
                 userFromContext : user,
             }}
@@ -43,6 +47,7 @@ const AppLayout = () => {
             <Outlet/>
             <FooterComponent/>
         </userContext.Provider>
+       </Provider>
     )
 };
 

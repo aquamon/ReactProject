@@ -1,6 +1,8 @@
 import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import userContext from "../utils/userContext";
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 const Title = () => (
     <Link to="/">
@@ -19,25 +21,26 @@ const HeaderComponent = () => {
 
     const {userFromContext} = useContext(userContext);
 
+    const cartItems = useSelector(store => store.cart.items);
 
     return (
         <div className="flex justify-between bg-pink-50 shadow-lg">
             <Title/>
             <div className="nav-items">
-                <ul className="flex m-8 gap-8">
+                <ul className="flex py-10">
                     <Link to="/">
-                        <li>Home</li>
+                        <li className="px-2">Home</li>
                     </Link>
                     <Link to='/about'>
-                        <li>About Us</li>
+                        <li className="px-2">About Us</li>
                     </Link>
                     <Link to="/contact">
-                        <li>Contact</li>
+                        <li className="px-2">Contact</li>
                     </Link>
                     <Link to="/instamart">
-                        <li>Instamart</li>
+                        <li className="px-2">Instamart</li>
                     </Link>
-                    <li>Cart</li>
+                    <li className="px-2">Cart - {cartItems.length}</li>
                     
                 </ul>
             </div>

@@ -16,7 +16,7 @@ const RestaurantCard = ({resData , user}) => {
     
     return (
   
-        <div className="res-card w-[200] p-2 m-2 shadow-lg bg-pink-50" >
+        <div className="w-[200] p-2 m-2 shadow-lg bg-pink-50" >
         <img
           className="res-logo"
           alt="res-logo"
