@@ -40,7 +40,9 @@ const HeaderComponent = () => {
                     <Link to="/instamart">
                         <li className="px-2">Instamart</li>
                     </Link>
-                    <li className="px-2">Cart - {cartItems.length}</li>
+                    <Link to="/cart">
+                        <li className="px-2">Cart - {cartItems.length}</li>
+                    </Link>
                     
                 </ul>
             </div>

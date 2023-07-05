@@ -16,6 +16,7 @@ import userContext from "./utils/userContext";
 
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import CartComponent from "./components/Cart";
 
 //Dynamic Import
 // Lazy loading
@@ -82,6 +83,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/restaurants/:resId",
                 element : <RestaurantMenu/>,
+            },
+            {
+                path: "/cart",
+                element : <CartComponent/>,
             }
         ]
     }
