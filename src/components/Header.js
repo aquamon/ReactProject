@@ -2,12 +2,13 @@ import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import userContext from "../utils/userContext";
 import { useSelector } from "react-redux";
+import Logo from '../assets/img/GoodFood.png';
 import store from "../utils/store";
 
 const Title = () => (
     <Link to="/">
-        <img className="h-28 m-2"
-            src = "https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
+        <img className="h-28 m-2" data-testid="logo"
+            src = {Logo}
                 alt = "Logo"></img>
     </Link>
 );
